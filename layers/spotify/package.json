@@ -1,0 +1,13 @@
+{
+  "name": "spotify-app",
+  "type": "module",
+  "scripts": {
+    "prepare": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/scripts": "^0.9.5"
+  },
+  "devDependencies": {
+    "@types/spotify-web-playback-sdk": "^0.1.19"
+  }
+}
