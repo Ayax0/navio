@@ -12,13 +12,6 @@ export default withNuxt([
       "new-cap": "off",
       "no-console": "off",
       "vue/no-multiple-template-root": "off",
-      "prettier/prettier": [
-        "error",
-        {
-          endOfLine: "auto",
-          trailingComma: "es5",
-        },
-      ],
     },
   },
   {

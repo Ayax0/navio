@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   modules: ["@nuxt/eslint", "@vite-pwa/nuxt"],
   pwa: {
     manifest: {
-      name: "Carmedia",
-      short_name: "Carmedia",
+      name: "navio",
+      short_name: "navio",
       theme_color: "#e9560c",
       background_color: "#0c0a09",
       display: "standalone",

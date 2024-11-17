@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ConfigProvider } from "radix-vue";
 const useIdFunction = () => useId() || "";
 </script>
 

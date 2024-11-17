@@ -1,6 +1,4 @@
-import type { MediaConfig } from "~/types/app";
-
-export default defineAppConfig<MediaConfig>({
+export default defineAppConfig({
   apps: [
     {
       name: "Spotify",

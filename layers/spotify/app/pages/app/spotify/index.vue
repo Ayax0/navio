@@ -1,17 +1,22 @@
 <script lang="ts" setup>
-defineAudioPlayer({});
+defineAudioPlayer({
+  appId: "app-spotify",
+  async init() {
+    const spotify = await load();
+  },
+  async destroy() {
+    await remove();
+  },
+});
 
-const { remove, onLoaded } = useScript(
-  "https://sdk.scdn.co/spotify-player.js",
-  {
-    use: () => window.Spotify,
-  }
-);
-
-if (import.meta.client)
-  window.onSpotifyWebPlaybackSDKReady = () => {
-    console.log("spotify ready");
-  };
+const { load, remove } = useScript("https://sdk.scdn.co/spotify-player.js", {
+  use: () => window.Spotify,
+  trigger: "manual",
+  beforeInit() {
+    if (!import.meta.client) return;
+    window.onSpotifyWebPlaybackSDKReady = () => console.log("spotify ready");
+  },
+});
 
 onLoaded(({ Player }) => {
   const player = new Player({
