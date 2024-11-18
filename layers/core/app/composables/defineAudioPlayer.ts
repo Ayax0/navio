@@ -5,7 +5,7 @@ interface AudioPlayer {
     pause: () => void | Promise<void>;
     next: () => void | Promise<void>;
     previous: () => void | Promise<void>;
-    seek: () => void | Promise<void>;
+    seek: (ms: number) => void | Promise<void>;
     status: Ref<"idle" | "playing" | "paused">;
 }
 
